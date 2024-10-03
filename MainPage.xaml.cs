@@ -17,6 +17,8 @@ namespace Projeto_Final_SembII
             pageBackgroundLayout.BackgroundColor = (Color)Application.Current.Resources["pageBackgroundColor"];
             
             ToggleAccelerometer();
+            ToggleGyroscope();
+            ToggleMagnetometer();
 
         }
 
@@ -86,6 +88,94 @@ namespace Projeto_Final_SembII
                 Console.WriteLine("Formato de dados inválido.");
             }
             
+        }
+
+        private void ToggleGyroscope()
+        {
+            if (Gyroscope.Default.IsSupported)
+            {
+                if (!Gyroscope.Default.IsMonitoring)
+                {
+                    // Turn on gyroscope
+                    Gyroscope.Default.ReadingChanged += Gyroscope_ReadingChanged;
+                    Gyroscope.Default.Start(SensorSpeed.UI);
+                }
+                else
+                {
+                    // Turn off gyroscope
+                    Gyroscope.Default.Stop();
+                    Gyroscope.Default.ReadingChanged -= Gyroscope_ReadingChanged;
+                }
+            }
+        }
+
+        private void Gyroscope_ReadingChanged(object sender, GyroscopeChangedEventArgs e)
+        {
+
+
+            var match = Regex.Match(e.Reading.ToString(), @"X:\s*([-+]?[0-9]*,[0-9]+),\s*Y:\s*([-+]?[0-9]*,[0-9]+),\s*Z:\s*([-+]?[0-9]*,[0-9]+)");
+
+            if (match.Success)
+            {
+                // Convertendo os valores para double
+                double x = double.Parse(match.Groups[1].Value, CultureInfo.GetCultureInfo("pt-BR"));
+                double y = double.Parse(match.Groups[2].Value, CultureInfo.GetCultureInfo("pt-BR"));
+                double z = double.Parse(match.Groups[3].Value, CultureInfo.GetCultureInfo("pt-BR"));
+
+                // Exibindo os valores
+                GyroscopeX.Text = $"X: {x} rad/s";
+                GyroscopeY.Text = $"Y: {y} rad/s";
+                GyroscopeZ.Text = $"Z: {z} rad/s";
+            }
+            else
+            {
+                Console.WriteLine("Formato de dados inválido.");
+            }
+
+        }
+
+        private void ToggleMagnetometer()
+        {
+            if (Magnetometer.Default.IsSupported)
+            {
+                if (!Magnetometer.Default.IsMonitoring)
+                {
+                    // Turn on magnetometer
+                    Magnetometer.Default.ReadingChanged += Magnetometer_ReadingChanged;
+                    Magnetometer.Default.Start(SensorSpeed.UI);
+                }
+                else
+                {
+                    // Turn off magnetometer
+                    Magnetometer.Default.Stop();
+                    Magnetometer.Default.ReadingChanged -= Magnetometer_ReadingChanged;
+                }
+            }
+        }
+
+        private void Magnetometer_ReadingChanged(object sender, MagnetometerChangedEventArgs e)
+        {
+
+
+            var match = Regex.Match(e.Reading.ToString(), @"X:\s*([-+]?[0-9]*,[0-9]+),\s*Y:\s*([-+]?[0-9]*,[0-9]+),\s*Z:\s*([-+]?[0-9]*,[0-9]+)");
+
+            if (match.Success)
+            {
+                // Convertendo os valores para double
+                double x = double.Parse(match.Groups[1].Value, CultureInfo.GetCultureInfo("pt-BR"));
+                double y = double.Parse(match.Groups[2].Value, CultureInfo.GetCultureInfo("pt-BR"));
+                double z = double.Parse(match.Groups[3].Value, CultureInfo.GetCultureInfo("pt-BR"));
+
+                // Exibindo os valores
+                MagnetometerX.Text = $"X: {x} µT";
+                MagnetometerY.Text = $"Y: {y} µT";
+                MagnetometerZ.Text = $"Z: {z} µT";
+            }
+            else
+            {
+                Console.WriteLine("Formato de dados inválido.");
+            }
+
         }
 
     }
