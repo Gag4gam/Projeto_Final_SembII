@@ -12,7 +12,7 @@
             
 
             <Label
-                Text="SENSORES SEMB-II"
+                Text="SENSORES SEMBII"
                 Style="{StaticResource Headline}"
                 
                 SemanticProperties.HeadingLevel="Level1" />
@@ -177,14 +177,17 @@
         
                         </ImageButton>
                     </Grid>
-
+                   
                     <Label
-                        x:Name="GyroscopeX"
-                        Style="{StaticResource InsideBoxComponent}"
-                        Text="X:"
-                        TextColor="Black"
+                            x:Name="GyroscopeX"
+                            Style="{StaticResource InsideBoxComponent}"
+                            Text="X:"
+                            TextColor="Black"
+                            Grid.Column="0"
+                            VerticalOptions="Center"
 
                     />
+                    
                     <Label
                         x:Name="GyroscopeY"
                         Style="{StaticResource InsideBoxComponent}"
