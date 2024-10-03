@@ -17,8 +17,9 @@ namespace Projeto_Final_SembII
 
 #if DEBUG
     		builder.Logging.AddDebug();
-#endif
 
+#endif
+            
             return builder.Build();
         }
     }
