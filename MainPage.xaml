@@ -23,7 +23,7 @@
                 SemanticProperties.HeadingLevel="Level2" />
 
             <Label
-                Text="Gabriel,Saulo"
+                Text="Gabriel-|-Saulo"
                 Style="{StaticResource SubHeadline}"
     
                 SemanticProperties.HeadingLevel="Level3" />
@@ -309,13 +309,12 @@
                     />
                     <StackLayout
                         x:Name="DetailsMagnetometer"
-                        IsVisible="True"
+                        IsVisible="False"
                         Spacing="5"
                         >
                         
                         <Label
                             Text="Detalhes:"
-
                             Style="{StaticResource InsideBoxComponent}"
                             Margin="5"
                             TextColor="Black"
