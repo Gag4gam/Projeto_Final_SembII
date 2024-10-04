@@ -15,7 +15,7 @@ namespace Projeto_Final_SembII
             InitializeComponent();
 
             pageBackgroundLayout.BackgroundColor = (Color)Application.Current.Resources["pageBackgroundColor"];
-            
+
             ToggleAccelerometer();
             ToggleGyroscope();
             ToggleMagnetometer();
@@ -55,7 +55,7 @@ namespace Projeto_Final_SembII
                     BoxMagnetometer.HeightRequest = space;
 
                     break;
-                
+
             }
         }
 
@@ -116,7 +116,7 @@ namespace Projeto_Final_SembII
 
         private void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
         {
-     
+
 
             var match = Regex.Match(e.Reading.ToString(), @"X:\s*([-+]?[0-9]*,[0-9]+),\s*Y:\s*([-+]?[0-9]*,[0-9]+),\s*Z:\s*([-+]?[0-9]*,[0-9]+)");
 
