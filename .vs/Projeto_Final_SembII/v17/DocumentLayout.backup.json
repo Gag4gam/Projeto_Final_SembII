@@ -13,10 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|d:\\documentos\\ufu\\semb 2\\projeto_final_sembii\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|d:\\documentos\\ufu\\semb 2\\projeto_final_sembii\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|solutionrelative:resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,17 +25,8 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Styles.xaml",
-              "DocumentMoniker": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\Resources\\Styles\\Styles.xaml",
-              "RelativeDocumentMoniker": "Resources\\Styles\\Styles.xaml",
-              "ToolTip": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\Resources\\Styles\\Styles.xaml",
-              "RelativeToolTip": "Resources\\Styles\\Styles.xaml",
-              "ViewState": "AgIAANMAAAAAAAAAAAAgwM8AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-03T13:59:05.297Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -49,7 +36,7 @@
               "RelativeDocumentMoniker": "MainPage.xaml.cs",
               "ToolTip": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\MainPage.xaml.cs",
               "RelativeToolTip": "MainPage.xaml.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T13:00:09.866Z",
               "EditorCaption": ""
@@ -62,7 +49,7 @@
               "RelativeDocumentMoniker": "App.xaml",
               "ToolTip": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\App.xaml",
               "RelativeToolTip": "App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-03T12:46:54.626Z",
               "EditorCaption": ""
@@ -75,7 +62,7 @@
               "RelativeDocumentMoniker": "MainPage.xaml",
               "ToolTip": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\MainPage.xaml",
               "RelativeToolTip": "MainPage.xaml",
-              "ViewState": "AgIAAOQAAAAAAAAAAAAAAPoAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAgwEgBAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-03T12:25:55.314Z",
               "EditorCaption": ""

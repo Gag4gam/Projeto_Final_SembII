@@ -54,7 +54,8 @@
                             HeightRequest="30"
                             CornerRadius="15"
                             Grid.Column="1"
-        
+                            Clicked="OnGraphicsButtonClicked"
+                            CommandParameter="Accelerometer"
                         >
                         </ImageButton>
                         <ImageButton
@@ -129,6 +130,13 @@
                         />
                     </StackLayout>
 
+                    <StackLayout
+                        x:Name="GraphicAccelerometer"
+                        IsVisible="False"
+                        Spacing="5"
+                        >
+                        
+                    </StackLayout>
 
                 </StackLayout>
 
@@ -161,7 +169,8 @@
                             HeightRequest="30"
                             CornerRadius="15"
                             Grid.Column="1"
-        
+                            Clicked="OnGraphicsButtonClicked"
+                            CommandParameter="Gyroscope"
                         >
                          </ImageButton>
                         <ImageButton
@@ -237,7 +246,13 @@
                             Text="Versão: "
                         />
                     </StackLayout>
-                    
+                    <StackLayout
+                        x:Name="GraphicGyroscope"
+                        IsVisible="False"
+                        Spacing="5"
+                        >
+
+                    </StackLayout>
 
                 </StackLayout>
 
@@ -270,7 +285,8 @@
                             HeightRequest="30"
                             CornerRadius="15"
                             Grid.Column="1"
-        
+                            Clicked="OnGraphicsButtonClicked"
+                            CommandParameter="Magnetometer"
                         >
                         </ImageButton>
                         <ImageButton
@@ -309,7 +325,7 @@
                     />
                     <StackLayout
                         x:Name="DetailsMagnetometer"
-                        IsVisible="True"
+                        IsVisible="False"
                         Spacing="5"
                         >
                         
@@ -347,8 +363,14 @@
     
                         />
                     </StackLayout>
-                    
 
+                    <StackLayout
+                        x:Name="GraphicMagnetometer"
+                        IsVisible="False"
+                        Spacing="5"
+                        >
+
+                    </StackLayout>
                 </StackLayout>
 
 
