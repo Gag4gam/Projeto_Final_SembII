@@ -32919,24 +32919,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\saulo\\.nuget\\packages\\": {},
-    "D:\\Arquivos De Programas\\Visual Studio IDE Shared\\NuGetPackages": {}
+    "C:\\Users\\gabri\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\Projeto_Final_SembII.csproj",
+      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Documents\\GitHub\\Projeto_Final_SembII\\Projeto_Final_SembII.csproj",
       "projectName": "Projeto_Final_SembII",
-      "projectPath": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\Projeto_Final_SembII.csproj",
-      "packagesPath": "C:\\Users\\saulo\\.nuget\\packages\\",
-      "outputPath": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\obj\\",
+      "projectPath": "C:\\Users\\gabri\\OneDrive\\Documents\\GitHub\\Projeto_Final_SembII\\Projeto_Final_SembII.csproj",
+      "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gabri\\OneDrive\\Documents\\GitHub\\Projeto_Final_SembII\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
-        "D:\\Arquivos De Programas\\Visual Studio IDE Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\saulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
