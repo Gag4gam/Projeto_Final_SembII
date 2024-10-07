@@ -3,30 +3,6 @@
   "WorkspaceRootPath": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|d:\\documentos\\ufu\\semb 2\\projeto_final_sembii\\projeto_final_sembii.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|solutionrelative:projeto_final_sembii.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|d:\\documentos\\ufu\\semb 2\\projeto_final_sembii\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|d:\\documentos\\ufu\\semb 2\\projeto_final_sembii\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|solutionrelative:resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|d:\\documentos\\ufu\\semb 2\\projeto_final_sembii\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|d:\\documentos\\ufu\\semb 2\\projeto_final_sembii\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|d:\\documentos\\ufu\\semb 2\\projeto_final_sembii\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|solutionrelative:resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|d:\\documentos\\ufu\\semb 2\\projeto_final_sembii\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D924F73-F3A0-47E9-9D3C-1D69B5E93300}|Projeto_Final_SembII.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -38,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,93 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Colors.xaml",
-              "DocumentMoniker": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\Resources\\Styles\\Colors.xaml",
-              "RelativeDocumentMoniker": "Resources\\Styles\\Colors.xaml",
-              "ToolTip": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\Resources\\Styles\\Colors.xaml",
-              "RelativeToolTip": "Resources\\Styles\\Colors.xaml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAAB8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-07T14:04:15.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "MainPage.xaml.cs",
               "ToolTip": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\MainPage.xaml.cs",
               "RelativeToolTip": "MainPage.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAqwBgAAABsAAAAAAAAAA==",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAiwKoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T14:04:06.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Projeto_Final_SembII",
-              "DocumentMoniker": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\Projeto_Final_SembII.csproj",
-              "RelativeDocumentMoniker": "Projeto_Final_SembII.csproj",
-              "ToolTip": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\Projeto_Final_SembII.csproj",
-              "RelativeToolTip": "Projeto_Final_SembII.csproj",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAC8AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-07T14:02:42.285Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\MainPage.xaml",
-              "RelativeDocumentMoniker": "MainPage.xaml",
-              "ToolTip": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\MainPage.xaml",
-              "RelativeToolTip": "MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-07T13:20:32.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Styles.xaml",
-              "DocumentMoniker": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\Resources\\Styles\\Styles.xaml",
-              "RelativeDocumentMoniker": "Resources\\Styles\\Styles.xaml",
-              "ToolTip": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\Resources\\Styles\\Styles.xaml",
-              "RelativeToolTip": "Resources\\Styles\\Styles.xaml",
-              "ViewState": "AgIAAKQBAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-07T13:19:24.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\AppShell.xaml",
-              "RelativeDocumentMoniker": "AppShell.xaml",
-              "ToolTip": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\AppShell.xaml",
-              "RelativeToolTip": "AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-07T13:17:28.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.xaml",
-              "DocumentMoniker": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "D:\\Documentos\\UFU\\SEMB 2\\Projeto_Final_SembII\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-07T13:17:17.312Z",
               "EditorCaption": ""
             }
           ]

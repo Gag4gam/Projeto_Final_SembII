@@ -12,12 +12,8 @@ namespace Projeto_Final_SembII
     public partial class MainPage : ContentPage
     {
 
-        private System.Timers.Timer _timer_Gyroscope;
-        private System.Timers.Timer _timer_Magnetometer;
-
-        private GyroscopeData _lastReadingGyroscope;
-        private MagnetometerData _lastReadingMagnetometer;
-
+        private int _gyroscopeCount = 0;
+        private int _magnetometerCount = 0;
         public MainPage()
         {
             InitializeComponent();
@@ -155,9 +151,7 @@ namespace Projeto_Final_SembII
                     Gyroscope.Default.ReadingChanged += Gyroscope_ReadingChanged;
                     Gyroscope.Default.Start(SensorSpeed.Default);
 
-                    _timer_Gyroscope = new System.Timers.Timer(500);
-                    _timer_Gyroscope.Elapsed += OnTimerGyroscopeElapsed;
-                    _timer_Gyroscope.Start();
+
                 }
                 else
                 {
@@ -165,29 +159,29 @@ namespace Projeto_Final_SembII
                     Gyroscope.Default.Stop();
                     Gyroscope.Default.ReadingChanged -= Gyroscope_ReadingChanged;
 
-                    _timer_Gyroscope.Stop();
-                    _timer_Gyroscope.Elapsed -= OnTimerGyroscopeElapsed;
+
                 }
             }
         }
 
         private void Gyroscope_ReadingChanged(object? sender, GyroscopeChangedEventArgs e)
         {
-            _lastReadingGyroscope = e.Reading;
-        }
-        private void OnTimerGyroscopeElapsed(object sender, ElapsedEventArgs e)
-        {
-            var match = Regex.Match(_lastReadingGyroscope.ToString(), @"X:\s*([-+]?[0-9]*,[0-9]+),\s*Y:\s*([-+]?[0-9]*,[0-9]+),\s*Z:\s*([-+]?[0-9]*,[0-9]+)");
-            if (match.Success)
+            _gyroscopeCount++;
+            if (_gyroscopeCount == 3)
             {
-                // Convertendo os valores para double
-                double x = double.Parse(match.Groups[1].Value, CultureInfo.GetCultureInfo("pt-BR"));
-                double y = double.Parse(match.Groups[2].Value, CultureInfo.GetCultureInfo("pt-BR"));
-                double z = double.Parse(match.Groups[3].Value, CultureInfo.GetCultureInfo("pt-BR"));
-                // Exibindo os valores
-                GyroscopeX.Text = $"X: {x} rad/s";
-                GyroscopeY.Text = $"Y: {y} rad/s";
-                GyroscopeZ.Text = $"Z: {z} rad/s";
+                _gyroscopeCount = 0;
+                var match = Regex.Match(e.Reading.ToString(), @"X:\s*([-+]?[0-9]*,[0-9]+),\s*Y:\s*([-+]?[0-9]*,[0-9]+),\s*Z:\s*([-+]?[0-9]*,[0-9]+)");
+                if (match.Success)
+                {
+                    // Convertendo os valores para double
+                    double x = double.Parse(match.Groups[1].Value, CultureInfo.GetCultureInfo("pt-BR"));
+                    double y = double.Parse(match.Groups[2].Value, CultureInfo.GetCultureInfo("pt-BR"));
+                    double z = double.Parse(match.Groups[3].Value, CultureInfo.GetCultureInfo("pt-BR"));
+                    // Exibindo os valores
+                    GyroscopeX.Text = $"X: {x} rad/s";
+                    GyroscopeY.Text = $"Y: {y} rad/s";
+                    GyroscopeZ.Text = $"Z: {z} rad/s";
+                }
             }
         }
         private void ToggleMagnetometer()
@@ -200,9 +194,7 @@ namespace Projeto_Final_SembII
                     Magnetometer.Default.ReadingChanged += Magnetometer_ReadingChanged;
                     Magnetometer.Default.Start(SensorSpeed.Default);
 
-                    _timer_Magnetometer = new System.Timers.Timer(1000);
-                    _timer_Magnetometer.Elapsed += OnTimerMagnetometerElapsed;
-                    _timer_Magnetometer.Start();
+
                 }
                 else
                 {
@@ -210,30 +202,31 @@ namespace Projeto_Final_SembII
                     Magnetometer.Default.Stop();
                     Magnetometer.Default.ReadingChanged -= Magnetometer_ReadingChanged;
 
-                    _timer_Magnetometer.Stop();
-                    _timer_Magnetometer.Elapsed -= OnTimerMagnetometerElapsed;
                 }
             }
         }
 
         private void Magnetometer_ReadingChanged(object? sender, MagnetometerChangedEventArgs e)
         {
-            _lastReadingMagnetometer = e.Reading;
-        }
-        private void OnTimerMagnetometerElapsed(object sender, ElapsedEventArgs e)
-        {
-            var match = Regex.Match(_lastReadingMagnetometer.ToString(), @"X:\s*([-+]?[0-9]*,[0-9]+),\s*Y:\s*([-+]?[0-9]*,[0-9]+),\s*Z:\s*([-+]?[0-9]*,[0-9]+)");
-            if (match.Success)
+            _magnetometerCount++;
+            
+            var match = Regex.Match(e.Reading.ToString(), @"X:\s*([-+]?[0-9]*,[0-9]+),\s*Y:\s*([-+]?[0-9]*,[0-9]+),\s*Z:\s*([-+]?[0-9]*,[0-9]+)");
+            if (_magnetometerCount == 5)
             {
-                // Convertendo os valores para double
-                double x = double.Parse(match.Groups[1].Value, CultureInfo.GetCultureInfo("pt-BR"));
-                double y = double.Parse(match.Groups[2].Value, CultureInfo.GetCultureInfo("pt-BR"));
-                double z = double.Parse(match.Groups[3].Value, CultureInfo.GetCultureInfo("pt-BR"));
-                // Exibindo os valores
-                MagnetometerX.Text = $"X: {x} µT";
-                MagnetometerY.Text = $"Y: {y} µT";
-                MagnetometerZ.Text = $"Z: {z} µT";
+                _magnetometerCount = 0;
+                if (match.Success)
+                {
+                    // Convertendo os valores para double
+                    double x = double.Parse(match.Groups[1].Value, CultureInfo.GetCultureInfo("pt-BR"));
+                    double y = double.Parse(match.Groups[2].Value, CultureInfo.GetCultureInfo("pt-BR"));
+                    double z = double.Parse(match.Groups[3].Value, CultureInfo.GetCultureInfo("pt-BR"));
+                    // Exibindo os valores
+                    MagnetometerX.Text = $"X: {x} µT";
+                    MagnetometerY.Text = $"Y: {y} µT";
+                    MagnetometerZ.Text = $"Z: {z} µT";
+                }
             }
+
         }
     }
 }
