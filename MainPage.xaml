@@ -45,7 +45,7 @@
                             Text="Acelerometro"
                             Style="{StaticResource InsideBoxTitle}"
                             TextColor="Black"
-                            HorizontalOptions="Center"
+                            HorizontalOptions="Start"
                         
                         />
                         <ImageButton
@@ -160,7 +160,7 @@
                              Text="Giroscópio"
                              Style="{StaticResource InsideBoxTitle}"
                              TextColor="Black"
-                             HorizontalOptions="Center"
+                             HorizontalOptions="Start"
      
                          />
                         <ImageButton
@@ -273,10 +273,10 @@
                 >
                     <Grid ColumnDefinitions="*,Auto,Auto">
                         <Label
-                        Text="Magetômetro"
+                        Text="Magnetômetro"
                         Style="{StaticResource InsideBoxTitle}"
                         TextColor="Black"
-                        HorizontalOptions="Center"
+                        HorizontalOptions="Start"
                         
                         />
                         <ImageButton

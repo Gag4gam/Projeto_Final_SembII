@@ -1,14 +1,22 @@
 ﻿using Microsoft.Maui.Controls;
 using System;
 using System.Globalization;
-using System.Runtime.CompilerServices;
+
 using System.Text.RegularExpressions;
+using System.Timers;
 
 
 namespace Projeto_Final_SembII
 {
+
     public partial class MainPage : ContentPage
     {
+
+        private System.Timers.Timer _timer_Gyroscope;
+        private System.Timers.Timer _timer_Magnetometer;
+
+        private GyroscopeData _lastReadingGyroscope;
+        private MagnetometerData _lastReadingMagnetometer;
 
         public MainPage()
         {
@@ -66,8 +74,6 @@ namespace Projeto_Final_SembII
             var parameter = button?.CommandParameter as string;
             var space = 230;
 
-            Console.WriteLine("Chegou");
-            Console.WriteLine(parameter);
             switch (parameter)
             {
                 case "Accelerometer":
@@ -103,18 +109,22 @@ namespace Projeto_Final_SembII
                 {
                     // Turn on accelerometer
                     Accelerometer.Default.ReadingChanged += Accelerometer_ReadingChanged;
-                    Accelerometer.Default.Start(SensorSpeed.UI);
+                    Accelerometer.Default.Start(SensorSpeed.Default);
+
+
                 }
                 else
                 {
                     // Turn off accelerometer
                     Accelerometer.Default.Stop();
                     Accelerometer.Default.ReadingChanged -= Accelerometer_ReadingChanged;
+
+
                 }
             }
         }
 
-        private void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
+        private void Accelerometer_ReadingChanged(object? sender, AccelerometerChangedEventArgs e)
         {
 
 
@@ -143,19 +153,31 @@ namespace Projeto_Final_SembII
                 {
                     // Turn on gyroscope
                     Gyroscope.Default.ReadingChanged += Gyroscope_ReadingChanged;
-                    Gyroscope.Default.Start(SensorSpeed.UI);
+                    Gyroscope.Default.Start(SensorSpeed.Default);
+
+                    _timer_Gyroscope = new System.Timers.Timer(500);
+                    _timer_Gyroscope.Elapsed += OnTimerGyroscopeElapsed;
+                    _timer_Gyroscope.Start();
                 }
                 else
                 {
                     // Turn off gyroscope
                     Gyroscope.Default.Stop();
                     Gyroscope.Default.ReadingChanged -= Gyroscope_ReadingChanged;
+
+                    _timer_Gyroscope.Stop();
+                    _timer_Gyroscope.Elapsed -= OnTimerGyroscopeElapsed;
                 }
             }
         }
-        private void Gyroscope_ReadingChanged(object sender, GyroscopeChangedEventArgs e)
+
+        private void Gyroscope_ReadingChanged(object? sender, GyroscopeChangedEventArgs e)
         {
-            var match = Regex.Match(e.Reading.ToString(), @"X:\s*([-+]?[0-9]*,[0-9]+),\s*Y:\s*([-+]?[0-9]*,[0-9]+),\s*Z:\s*([-+]?[0-9]*,[0-9]+)");
+            _lastReadingGyroscope = e.Reading;
+        }
+        private void OnTimerGyroscopeElapsed(object sender, ElapsedEventArgs e)
+        {
+            var match = Regex.Match(_lastReadingGyroscope.ToString(), @"X:\s*([-+]?[0-9]*,[0-9]+),\s*Y:\s*([-+]?[0-9]*,[0-9]+),\s*Z:\s*([-+]?[0-9]*,[0-9]+)");
             if (match.Success)
             {
                 // Convertendo os valores para double
@@ -176,19 +198,31 @@ namespace Projeto_Final_SembII
                 {
                     // Turn on magnetometer
                     Magnetometer.Default.ReadingChanged += Magnetometer_ReadingChanged;
-                    Magnetometer.Default.Start(SensorSpeed.UI);
+                    Magnetometer.Default.Start(SensorSpeed.Default);
+
+                    _timer_Magnetometer = new System.Timers.Timer(1000);
+                    _timer_Magnetometer.Elapsed += OnTimerMagnetometerElapsed;
+                    _timer_Magnetometer.Start();
                 }
                 else
                 {
                     // Turn off magnetometer
                     Magnetometer.Default.Stop();
                     Magnetometer.Default.ReadingChanged -= Magnetometer_ReadingChanged;
+
+                    _timer_Magnetometer.Stop();
+                    _timer_Magnetometer.Elapsed -= OnTimerMagnetometerElapsed;
                 }
             }
         }
-        private void Magnetometer_ReadingChanged(object sender, MagnetometerChangedEventArgs e)
+
+        private void Magnetometer_ReadingChanged(object? sender, MagnetometerChangedEventArgs e)
         {
-            var match = Regex.Match(e.Reading.ToString(), @"X:\s*([-+]?[0-9]*,[0-9]+),\s*Y:\s*([-+]?[0-9]*,[0-9]+),\s*Z:\s*([-+]?[0-9]*,[0-9]+)");
+            _lastReadingMagnetometer = e.Reading;
+        }
+        private void OnTimerMagnetometerElapsed(object sender, ElapsedEventArgs e)
+        {
+            var match = Regex.Match(_lastReadingMagnetometer.ToString(), @"X:\s*([-+]?[0-9]*,[0-9]+),\s*Y:\s*([-+]?[0-9]*,[0-9]+),\s*Z:\s*([-+]?[0-9]*,[0-9]+)");
             if (match.Success)
             {
                 // Convertendo os valores para double
