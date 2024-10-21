@@ -1,0 +1,64 @@
+
+.container{
+    background-color: #0d5ee0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    
+}
+.tytles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tytle_card{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap:20px;
+
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: none;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    gap: 20px;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    width: 700px; /* Definindo um tamanho específico */
+    height: 390px; /* Definindo um tamanho específico */
+}
+.single_card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 5px;
+    
+    width: 100%;
+    height: 100%;
+
+}
+.sensor_values{
+    margin-left: 15px;
+}
+.fabricant_values{
+    margin-left: 15px;
+}

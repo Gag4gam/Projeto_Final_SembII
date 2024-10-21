@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>WEBPAGE SEMBII</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tytles">
+            <h1>Projeto SEMBII</h1>
+            <h2>Grupo: Gabriel Cortes | Saulo Jorenti</h2>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="single_card" id="accelerometer_card">
+                    <div class="tytle_card">
+                        <h3>Magnetômetro</h3>
+                        <button id="graphic_acelerometer_button" onclick="graphic_click('accelerometer')">
+                            <img src="images/graphicicon.png" alt="" width="35" height="35" >
+                        </button>
+                        <button id="details_acelerometer_button" onclick="details_click('accelerometer')">
+                            <img src="images/listmore.png" alt="" width="35" height="35">
+                        </button>
+                    </div>
+    
+                    <div class="sensor_values">
+                        <p>Valor X: 0</p>
+                        <p>Valor Y: 0</p>
+                        <p>Valor Z: 0</p>
+                    </div>
+    
+                    <div id="details_accelerometer" class="fabricant_values" style="visibility: visible;">
+                        <h4>Detalhes: </h4>
+                        <p>Fabricante: STMicroelectronics</p>
+                        <p>Modelo: LSM303D</p>
+                        <p>Versão: 1.0.2</p>
+                        <p>Energia: 200mA</p>
+                    </div>
+                </div>
+                <div class="graphic" id="graphic_accelerometer" style="visibility: hidden;">
+                    <img src="images/graphicicon.png" alt="" width="100%" height="100%">
+                </div>
+            </div>
+            <div class="card">
+                <div class="single_card" id="gyroscope_card">
+                    <div class="tytle_card">
+                        <h3>Giroscópio</h3>
+                        <button onclick="graphic_click('gyroscope')">
+                            <img src="images/graphicicon.png" alt="" width="35" height="35" >
+                        </button>
+                        <button onclick="details_click('gyroscope')">
+                            <img src="images/listmore.png" alt="" width="35" height="35" >
+                        </button>
+                    </div>
+    
+                    <div class="sensor_values">
+                        <p>Valor X: 0</p>
+                        <p>Valor Y: 0</p>
+                        <p>Valor Z: 0</p>
+                    </div>
+    
+                    <div class="fabricant_values" id="details_gyroscope" style="visibility: visible;">
+                        <h4>Detalhes: </h4>
+                        <p>Fabricante: STMicroelectronics</p>
+                        <p>Modelo: LSM303D</p>
+                        <p>Versão: 1.0.2</p>
+                        <p>Energia: 200mA</p>
+                    </div>
+                </div>
+                <div class="graphic" id="graphic_gyroscope" style="visibility: hidden;">
+                    <img src="images/graphicicon.png" alt="" width="100%" height="100%">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="single_card" id="magnetometer_card">
+                    <div class="tytle_card">
+                        <h3>Magnetômetro</h3>
+                        <button onclick="graphic_click('magnetometer')">
+                            <img src="images/graphicicon.png" alt="" width="35" height="35" >
+                        </button>
+                        <button onclick="details_click('magnetometer')">
+                            <img src="images/listmore.png" alt="" width="35" height="35" >
+                        </button>
+                    </div>
+    
+                    <div class="sensor_values">
+                        <p>Valor X: 0</p>
+                        <p>Valor Y: 0</p>
+                        <p>Valor Z: 0</p>
+                    </div>
+    
+                    <div class="fabricant_values" id="details_magnetometer" style="visibility: visible;">
+                        <h4>Detalhes: </h4>
+                        <p>Fabricante: STMicroelectronics</p>
+                        <p>Modelo: LSM303D</p>
+                        <p>Versão: 1.0.2</p>
+                        <p>Energia: 200mA</p>
+                    </div>
+                </div>
+                <div class="graphic" id="graphic_magnetometer" style="visibility: visible;">
+                    <img src="images/graphicicon.png" alt="" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
