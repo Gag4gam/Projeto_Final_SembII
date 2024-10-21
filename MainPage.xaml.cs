@@ -1,7 +1,7 @@
 ﻿using Microsoft.Maui.Controls;
 using System;
 using System.Globalization;
-
+using LiveCharts;
 using System.Text.RegularExpressions;
 using System.Timers;
 
@@ -20,9 +20,36 @@ namespace Projeto_Final_SembII
 
             pageBackgroundLayout.BackgroundColor = (Color)Application.Current.Resources["pageBackgroundColor"];
 
-            ToggleAccelerometer();
-            ToggleGyroscope();
-            ToggleMagnetometer();
+            ExecutarEmThread();
+
+
+        }
+
+
+        private void ExecutarEmThread()
+        {
+            var t1 = new Thread(() =>
+            {
+                ToggleAccelerometer();
+            });
+
+            var t2 = new Thread(() =>
+            {
+                ToggleGyroscope();
+            });
+
+            var t3 = new Thread(() =>
+            {
+                ToggleMagnetometer();
+            });
+
+            t1.Start();
+            t2.Start();
+            t3.Start();
+
+            t1.Join();
+            t2.Join();
+            t3.Join();
 
         }
 
@@ -228,5 +255,8 @@ namespace Projeto_Final_SembII
             }
 
         }
+
+        
+
     }
 }
